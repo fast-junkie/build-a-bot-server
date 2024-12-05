@@ -1,0 +1,18 @@
+{
+  "name": "build-a-bot-server",
+  "version": "1.0.0",
+  "description": "A server used by the Pluralsight Vue.js Fundamentals course",
+  "main": "index.js",
+  "scripts": {
+    "serve": "node ."
+  },
+  "author": "Jim Cooper",
+  "license": "ISC",
+  "dependencies": {
+    "connect-history-api-fallback": "2.0.0",
+    "eslint": "8.57.1",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-plugin-import": "2.31.0",
+    "express": "4.21.1"
+  }
+}
