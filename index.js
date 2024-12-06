@@ -1,7 +1,10 @@
 const express = require('express');
+const history = require('connect-history-api-fallback');
 
 const app = express();
 const port = 8081;
+
+app.use(history({ index: '/index.html' }));
 
 app.get('/api/parts', (req, res) => res.send({
   heads: [
@@ -170,5 +173,7 @@ app.post('/api/cart', (req, res) => setTimeout(() => res.status(201).send(), 800
 app.post('/api/sign-in', (req, res) => res.status(200).send());
 
 app.use('/api/assets', express.static('images'));
+
+app.use('/', express.static('dist', { index: 'index.html' }));
 
 app.listen(port, () => console.debug('listening :: %d', port));
